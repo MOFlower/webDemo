@@ -12,7 +12,7 @@
     <select id="selectUserByUsername" resultType="com.web.study.entity.User">
         SELECT *
         FROM userinfo
-        WHERE username = #{usernmae}
+        WHERE username = #{username}
     </select>
 
     <insert id="insert">

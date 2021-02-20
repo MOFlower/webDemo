@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.web.study.dao.CourseDao">
+    <select id="selectCourseByCourseName" resultType="com.web.study.entity.Course">
+        SELECT *
+        FROM courses
+        <if test="courseName != null">
+            WHERE coursename LIKE #{courseName}
+        </if>
+        LIMIT #{pageStart}, #{pageSize}
+    </select>
+</mapper>

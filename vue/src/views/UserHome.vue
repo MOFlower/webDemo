@@ -4,44 +4,24 @@
       MY COURSES
     </el-card>
 
-    <div style="width: 80%; margin-left: 10%; margin-top: 2%">
-      <el-row :gutter="30">
-        <el-col :span="12">
-          <el-card :body-style="{ padding: '20px' }">
-            <img src="../assets/img/courses.jpg" class="image" />
-            <div class="courses_txt" style="padding: 10px">
-              <span>courses</span>
-            </div>
-          </el-card>
-        </el-col>
-
-        <el-col :span="12">
-          <el-card :body-style="{ padding: '20px' }">
-            <img src="../assets/img/courses.jpg" class="image" />
-            <div class="courses_txt" style="padding: 10px">
-              <span>courses</span>
-            </div>
-          </el-card>
-        </el-col>
-      </el-row>
-      <el-row :gutter="30" style="margin-top: 3%">
-        <el-col :span="12">
-          <el-card :body-style="{ padding: '20px' }">
-            <img src="../assets/img/courses.jpg" class="image" />
-            <div class="courses_txt" style="padding: 10px">
-              <span>courses</span>
-            </div>
-          </el-card>
-        </el-col>
-        <el-col :span="12">
-          <el-card :body-style="{ padding: '20px' }">
-            <img src="../assets/img/courses.jpg" class="image" />
-            <div class="courses_txt" style="padding: 10px">
-              <span>courses</span>
-            </div>
-          </el-card>
-        </el-col>
-      </el-row>
+    <div
+      style="width: 90%; margin-left: 6.5%; margin-top: 3%; flex-wrap: wrap; display: flex"
+    >
+      <div
+        v-for="course in courses"
+        v-bind:key="course.id"
+        style="width: 45%; margin-right: 3%; margin-bottom: 3%"
+      >
+        <el-card
+          :body-style="{ padding: '20px' }"
+          style="box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2); border-radius: 10px; shadow: hover;"
+        >
+          <img src="../assets/img/courses.jpg" class="image" />
+          <div class="courses_txt" style="padding: 10px">
+            <span>{{ course.name }}</span>
+          </div>
+        </el-card>
+      </div>
     </div>
 
     <el-card class="box-card">
@@ -100,6 +80,12 @@ export default {
       lastname: "",
       phone: "",
       email: "",
+      courses: [
+        { id: 1, name: "course" },
+        { id: 1, name: "course" },
+        { id: 1, name: "course" },
+        { id: 1, name: "course" },
+      ],
     };
   },
 };
@@ -107,7 +93,6 @@ export default {
 
 <style scoped>
 .background {
-
 }
 .box-card {
   font-family: monaco;

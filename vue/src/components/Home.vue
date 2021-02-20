@@ -1,7 +1,7 @@
 <template>
   <div class="outPage">
     <div class="page">
-      <div style="background-color: rgb(226, 233, 240)">
+      <div style="background-color: rgb(226, 233, 240); min-height: 800px">
       <vhead></vhead>
         <router-view> </router-view>
         <div style="height: 100px"></div>
@@ -22,7 +22,7 @@ export default {
 <style scoped>
 .outPage {
   background-color: whitesmoke;
-  color:rgb(226, 233, 240);
+  min-height: 800px;
 }
 .page {
   margin-left: 10%;

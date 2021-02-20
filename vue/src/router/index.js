@@ -13,6 +13,10 @@ const routes = [
     component: () => import('../views/Introduction.vue'),
   },
   {
+    path: '/test',
+    component: () => import ('../views/test.vue'),
+  },
+  {
     path: '/',
     component: () => import('../components/Home.vue'),
     children: [
@@ -24,7 +28,6 @@ const routes = [
        path: '/courses',
        component: () => import('../views/Courses.vue'),
      }
-
     ]
   }
 
