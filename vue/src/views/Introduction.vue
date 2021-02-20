@@ -2,7 +2,7 @@
   <div class="page">
     <div class="background">
       <el-container>
-        <el-header>
+        <el-header >
           <el-row :gutter="20">
             <el-col :span="3">
               <img src="../assets/img/logo.png" />
@@ -19,7 +19,7 @@
           </el-row>
         </el-header>
 
-        <el-header> </el-header>
+        <el-header > </el-header>
         <el-header> </el-header>
 
         <el-main>
@@ -297,7 +297,6 @@ export default {
 .el-link {
   width: 120px;
   height: 50px;
-  background-color: rgba(211, 193, 145, 0.315);
   font-family: helvetica;
   font-size: 25px;
 }

@@ -1,10 +1,12 @@
 <template>
   <div class="outPage">
     <div class="page">
-    <vhead></vhead>
-
-    <router-view> </router-view>
-  </div>
+      <div style="background-color: rgb(226, 233, 240)">
+      <vhead></vhead>
+        <router-view> </router-view>
+        <div style="height: 100px"></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -20,10 +22,11 @@ export default {
 <style scoped>
 .outPage {
   background-color: whitesmoke;
+  color:rgb(226, 233, 240);
 }
-.page{
+.page {
   margin-left: 10%;
   width: 80%;
-  height: 1000px;
+  height: auto;
 }
 </style>
