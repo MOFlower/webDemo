@@ -15,6 +15,9 @@ a<template>
         <el-menu-item index="courses">
           COURSES
         </el-menu-item>
+        <el-menu-item index="communication">
+          COMMUNICATION
+        </el-menu-item>
         <div style="position: absolute; right: 0%">
           <el-menu-item index="introduction">
             LOG OUT

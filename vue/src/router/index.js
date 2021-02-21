@@ -21,6 +21,10 @@ const routes = [
     component: () => import('../components/Home.vue'),
     children: [
       {
+        path: 'communication',
+        component: () => import('../views/Communication.vue'),
+      },
+      {
         path: '/userhome',
         component: () => import('../views/UserHome.vue'),
       },
