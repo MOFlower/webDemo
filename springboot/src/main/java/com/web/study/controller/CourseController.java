@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @RestController
-@RequestMapping("/course")
+@RequestMapping("/api/course")
 public class CourseController {
 
     @Autowired
@@ -28,6 +28,12 @@ public class CourseController {
                 queryInfo.getPageSize());
         HashMap<String, Object> response = new HashMap<>();
         response.put("courseList", courses);
+        if (courses.size() == 0) {
+            response.put("flag", "no");
+        } else {
+            response.put("flag", "ok");
+        }
+
         return JSON.toJSONString(response);
 
     }

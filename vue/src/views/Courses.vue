@@ -1,8 +1,8 @@
 <template>
   <div>
     <el-card class="searchbox">
-      <el-row>
-        <el-col :span="22">
+      <div style="display: flex;">
+        <div style="width: 95%">
           <el-input
             v-model="queryInfo.info"
             placeholder="Search our courses"
@@ -10,11 +10,11 @@
             @clear="search"
             @keyup.enter.native="search"
           ></el-input>
-        </el-col>
-        <el-col :span="0.5" :offset="1">
-          <el-button icon="el-icon-search" circle @click="search" ></el-button>
-        </el-col>
-      </el-row>
+        </div>
+        <div style="margin-left: 2%">
+          <el-button icon="el-icon-search" circle @click="search"></el-button>
+        </div>
+      </div>
     </el-card>
 
     <div
@@ -66,10 +66,11 @@ export default {
         url: "/api/course/search",
         data: this.queryInfo,
       }).then((res) => {
-        console.log(res);
-        console.log(this.courses);
-        this.courses = res.data.courseList;
-        console.log(this.courses);
+        if (res.data.flag == "ok") {
+          this.courses = res.data.courseList;
+        } else {
+          this.$message.error("NO RESULT!");
+        }
       });
     },
   },
@@ -80,7 +81,7 @@ export default {
 .searchbox {
   width: 90%;
   margin-left: 5%;
-  margin-top: 5%;
+  margin-top: 20px;
 }
 .image {
   width: 100%;

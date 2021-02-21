@@ -2,7 +2,7 @@
   <div class="page">
     <div class="background">
       <el-container>
-        <el-header >
+        <el-header>
           <el-row :gutter="20">
             <el-col :span="3">
               <img src="../assets/img/logo.png" />
@@ -19,18 +19,15 @@
           </el-row>
         </el-header>
 
-        <el-header > </el-header>
-        <el-header> </el-header>
-
-        <el-main>
-          <div class="login-wrap">
-            <div class="form-login">
+        <el-main >
+          <div class="login-wrap" >
+            <div class="form-login" >
               <div class="form-title">National Education</div>
               <el-form
                 :model="login"
                 ref="login"
+                style="padding: 8%"
                 label-width="0px"
-                style="padding: 30px 30px"
                 v-show="isLogin"
               >
                 <div class="form-smalltitle">LOG IN</div>
@@ -69,13 +66,10 @@
                 </el-form-item>
 
                 <el-form-item>
-                  <el-button
-                    style="width: 140px"
-                    type="primary"
-                    @click="GoLogin"
+                  <el-button style="width: 48%" type="primary" @click="GoLogin"
                     >LOG IN</el-button
                   >
-                  <el-button style="width: 140px" @click="GoSignup"
+                  <el-button style="width: 48%" @click="GoSignup"
                     >SIGN UP</el-button
                   >
                 </el-form-item>
@@ -85,7 +79,7 @@
                 :model="signup"
                 ref="signup"
                 label-width="0px"
-                style="padding: 30px 30px"
+                style="padding: 8%"
                 v-show="!isLogin"
                 :rules="signUpRules"
               >
@@ -117,13 +111,10 @@
                 </el-form-item>
 
                 <el-form-item>
-                  <el-button
-                    style="width: 140px"
-                    type="primary"
-                    @click="GoLogin"
+                  <el-button style="width: 48%" type="primary" @click="GoLogin"
                     >LOG IN</el-button
                   >
-                  <el-button style="width: 140px" @click="GoSignup"
+                  <el-button style="width: 48%" @click="GoSignup"
                     >SIGN UP</el-button
                   >
                 </el-form-item>
@@ -275,6 +266,8 @@ export default {
 
 <style lang="postcss" scoped>
 .page {
+  min-width: 1024px;
+  min-height: 768px;
 }
 .background {
   background-color: beige;
@@ -308,27 +301,23 @@ export default {
 
 .login-wrap {
   position: absolute;
-  padding-top: 0%;
-  padding-left: 100%;
-  width: 60%;
-  height: 450px;
+  min-width: 1024px;
+  width: 100%;
+  top: 25%;
 }
 .form-login {
   position: absolute;
-  left: 50%;
-  top: 40%;
-  width: 350px;
-  margin: -190px 0 0 -175px;
+  right: 8%;
+  width: 380px;
   border-radius: 5px;
   background: #dcdfe68e;
-  overflow: initial;
 }
 .form-title {
   width: 100%;
-  line-height: 70px;
+  line-height: 100px;
   text-align: center;
   font-family: helvetica;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 600;
   color: rgb(7, 116, 116);
   border-bottom: 2px solid rgb(151, 148, 148);
@@ -340,8 +329,11 @@ export default {
   line-height: 30px;
   text-align: center;
   font-family: helvetica;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
   color: rgb(12, 122, 8);
+}
+.courses_txt {
+  font-family: monaco;
 }
 </style>

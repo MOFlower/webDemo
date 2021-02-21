@@ -9,21 +9,17 @@ a<template>
         text-color="aliceblue"
         active-text-color="#20a0ff"
       >
-        <el-col :span="1.5" :offset="0.5">
-          <el-menu-item index="userhome">
-            HOME
-          </el-menu-item>
-        </el-col>
-        <el-col :span="1.5">
-          <el-menu-item index="courses">
-            COURSES
-          </el-menu-item>
-        </el-col>
-        <el-col :span="1.5" :offset="18">
+        <el-menu-item index="userhome">
+          HOME
+        </el-menu-item>
+        <el-menu-item index="courses">
+          COURSES
+        </el-menu-item>
+        <div style="position: absolute; right: 0%">
           <el-menu-item index="introduction">
             LOG OUT
           </el-menu-item>
-        </el-col>
+        </div>
       </el-menu>
     </el-row>
   </div>
@@ -43,7 +39,7 @@ export default {
 
 <style scoped>
 .el-menu {
-  height: 55px;
+  height: 60px;
   background-color: #242f42;
   font-family: monaco;
 }

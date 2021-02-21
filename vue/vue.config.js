@@ -2,10 +2,11 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
-                target: 'http://localhost:1234',
+                // target: 'http://moflowerlkh.top:80',
+                target: 'http://localhost:80',
                 changOrigin: true,  
                 pathRewrite: {
-                    '^/api': ''
+                    '^/api': '/api'
                 }
             },
         }
